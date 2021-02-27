@@ -1,10 +1,17 @@
 <template>
-  <div></div>
+  <div>
+    <slot name="title"></slot>
+    <slot name="content"></slot>
+  </div>
 </template>
 
 <script>
+// import PageTitle from '~/page-title.vue'
+
 export default {
-  components: {},
+  components: {
+    // PageTitle,
+  },
   data() {
     return {}
   },
