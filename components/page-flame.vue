@@ -1,19 +1,27 @@
 <template>
   <div>
-    <slot name="title"></slot>
+    <!-- <page-flame-title /> -->
+    <h1>{{ pageTitle }}</h1>
+    <!-- <slot name="title"></slot> -->
     <slot name="content"></slot>
   </div>
 </template>
 
 <script>
-// import PageTitle from '~/page-title.vue'
+import PageFlameTitle from '~/page-flame-title.vue'
 
 export default {
   components: {
-    // PageTitle,
+    PageFlameTitle,
   },
   data() {
     return {}
+  },
+  props: {
+    pageTitle: {
+      type: String,
+      required: true,
+    },
   },
 }
 </script>

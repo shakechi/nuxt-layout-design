@@ -1,5 +1,5 @@
 <template>
-  <page-flame>
+  <page-flame :pageTitle="タイトル">
     <template #title><h1>タイトル</h1></template>
     <template #content><h2>コンテンツ</h2> </template>
   </page-flame>
