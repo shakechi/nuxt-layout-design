@@ -1,12 +1,14 @@
 <template>
-  <div></div>
+  <div class="">
+    <h1>{{ pageTitle }}</h1>
+  </div>
 </template>
 
 <script>
 export default {
   components: {},
   props: {
-    content: {
+    pageTitle: {
       type: String,
       required: true,
     },

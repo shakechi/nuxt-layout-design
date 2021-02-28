@@ -1,21 +1,28 @@
 <template>
-  <page-flame :pageTitle="title">
+  <page-flame :page-title="pageTitle">
     <!-- <template #title><h1>タイトル</h1></template> -->
-    <template #content><h2>コンテンツ</h2> </template>
+    <template #pageContent>
+      <page-session :session-title="sessionTitle">
+        <template #sessionContent> </template>
+      </page-session>
+    </template>
   </page-flame>
 </template>
 
 <script>
 import PageFlame from '~/components/page-flame.vue'
+import PageSession from '~/components/page-session-flame.vue'
 
 export default {
   components: {
     PageFlame,
+    PageSession,
   },
   middleware: ['test-route'],
   data() {
     return {
-      title: 'タイトル',
+      pageTitle: 'タイトル',
+      sessionTitle: 'セッションタイトル',
     }
   },
 }

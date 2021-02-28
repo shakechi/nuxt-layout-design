@@ -1,18 +1,21 @@
 <template>
-  <div>
-    <!-- <page-flame-title /> -->
-    <h1>{{ pageTitle }}</h1>
+  <div class="content">
+    <page-title-flame :page-title="pageTitle" />
     <!-- <slot name="title"></slot> -->
-    <slot name="content"></slot>
+    <page-content-flame>
+      <slot name="pageContent"> </slot>
+    </page-content-flame>
   </div>
 </template>
 
 <script>
-// import PageFlameTitle from '~/components/page-flame-title.vue'
+import PageTitleFlame from '~/components/page-title.vue'
+import PageContentFlame from '~/components/page-content.vue'
 
 export default {
   components: {
-    // PageFlameTitle,
+    PageTitleFlame,
+    PageContentFlame,
   },
   props: {
     pageTitle: {
@@ -25,3 +28,11 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.content {
+  padding: 30px;
+  background-color: burlywood;
+  min-height: calc(100vh - 64px);
+}
+</style>
