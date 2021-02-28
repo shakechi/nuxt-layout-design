@@ -8,11 +8,11 @@
 </template>
 
 <script>
-import PageFlameTitle from '~/page-flame-title.vue'
+// import PageFlameTitle from '~/components/page-flame-title.vue'
 
 export default {
   components: {
-    PageFlameTitle,
+    // PageFlameTitle,
   },
   data() {
     return {}
