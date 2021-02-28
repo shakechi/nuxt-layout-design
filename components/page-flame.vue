@@ -14,14 +14,14 @@ export default {
   components: {
     // PageFlameTitle,
   },
-  data() {
-    return {}
-  },
   props: {
     pageTitle: {
       type: String,
       required: true,
     },
+  },
+  data() {
+    return {}
   },
 }
 </script>

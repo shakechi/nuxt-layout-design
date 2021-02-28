@@ -9,17 +9,14 @@
 import PageFlame from '~/components/page-flame.vue'
 
 export default {
-  middleware: ['test-route'],
   components: {
     PageFlame,
   },
+  middleware: ['test-route'],
   data() {
     return {
       title: 'タイトル',
     }
-  },
-  mounted() {
-    console.log(this.$route)
   },
 }
 </script>
