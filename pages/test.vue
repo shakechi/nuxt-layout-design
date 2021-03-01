@@ -25,5 +25,9 @@ export default {
       sessionTitle: 'セッションタイトル',
     }
   },
+  mounted() {
+    console.log('a')
+    console.log(this.$route.fullPath)
+  },
 }
 </script>
