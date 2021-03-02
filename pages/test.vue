@@ -2,8 +2,11 @@
   <page-flame :page-title="pageTitle">
     <!-- <template #title><h1>タイトル</h1></template> -->
     <template #pageContent>
-      <page-session :session-title="sessionTitle">
+      <page-session :session-title="sessionTitle1">
         <template #sessionContent> aaaa </template>
+      </page-session>
+      <page-session :session-title="sessionTitle2">
+        <template #sessionContent> bbbb </template>
       </page-session>
     </template>
   </page-flame>
@@ -22,7 +25,8 @@ export default {
   data() {
     return {
       pageTitle: 'タイトル',
-      sessionTitle: 'セッションタイトル',
+      sessionTitle1: 'セッションタイトル1',
+      sessionTitle2: 'セッションタイトル2',
     }
   },
   mounted() {

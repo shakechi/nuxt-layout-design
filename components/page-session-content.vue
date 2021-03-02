@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="session-content-color">
     <slot></slot>
   </div>
 </template>
@@ -18,3 +18,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.session-content-color {
+  background-color: rgb(255, 202, 246);
+}
+</style>
