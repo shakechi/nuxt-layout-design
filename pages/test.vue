@@ -3,7 +3,7 @@
     <!-- <template #title><h1>タイトル</h1></template> -->
     <template #pageContent>
       <page-session :session-title="sessionTitle">
-        <template #sessionContent> </template>
+        <template #sessionContent> aaaa </template>
       </page-session>
     </template>
   </page-flame>

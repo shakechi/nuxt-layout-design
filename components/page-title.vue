@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="title-color">
     <h1>{{ pageTitle }}</h1>
   </div>
 </template>
@@ -18,3 +18,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.title-color {
+  background-color: blue;
+}
+</style>
