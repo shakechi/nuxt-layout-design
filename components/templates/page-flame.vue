@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import PageTitleFlame from '~/components/page-title.vue'
-import PageContentFlame from '~/components/page-content.vue'
+import PageTitleFlame from '~/components/organisms/page-title.vue'
+import PageContentFlame from '~/components/organisms/page-content.vue'
 
 export default {
   components: {

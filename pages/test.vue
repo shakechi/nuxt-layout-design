@@ -3,18 +3,20 @@
     <!-- <template #title><h1>タイトル</h1></template> -->
     <template #pageContent>
       <page-session :session-title="sessionTitle1">
-        <template #sessionContent> aaaa </template>
+        <p>セッションコンテンツ１</p>
+        <p>セッションコンテンツ１</p>
       </page-session>
       <page-session :session-title="sessionTitle2">
-        <template #sessionContent> bbbb </template>
+        <p>セッションコンテンツ２</p>
+        <p>セッションコンテンツ２</p>
       </page-session>
     </template>
   </page-flame>
 </template>
 
 <script>
-import PageFlame from '~/components/page-flame.vue'
-import PageSession from '~/components/page-session-flame.vue'
+import PageFlame from '~/components/templates/page-flame.vue'
+import PageSession from '~/components/templates/page-session-flame.vue'
 
 export default {
   components: {
