@@ -1,0 +1,15 @@
+version: '3'
+services:
+  nuxt:
+    # .Dockerfileをもとにnuxtコンテナを作成する
+    build: .
+    # コンテナ起動時のコマンド
+    command: yarn run dev
+    # コンテナ外部からport3000でアクセスできるようにする
+    ports:
+      - '8080:3000'
+    # volumes:
+    #   # ホストOSとコンテナ内でNuxt.jsのソースコードを共有できるようする
+    #   - ./nuxt/src:/home/app/nuxt
+    #     # node_modulesはコンテナ内の内容で上書き
+    #   - /home/app/nuxt/node_modules
