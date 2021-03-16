@@ -89,5 +89,8 @@ export default {
     Logo,
     VuetifyLogo,
   },
+  mounted() {
+    console.log(process.env.TEST_KEY)
+  },
 }
 </script>
