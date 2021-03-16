@@ -6,6 +6,12 @@
         <p>セッションコンテンツ１</p>
         <p>セッションコンテンツ１</p>
       </page-session>
+
+      <page-session :session-title="sessionTitle2">
+        <p>セッションコンテンツ２</p>
+        <p>セッションコンテンツ２</p>
+      </page-session>
+
       <page-session :session-title="sessionTitle2">
         <p>セッションコンテンツ２</p>
         <p>セッションコンテンツ２</p>

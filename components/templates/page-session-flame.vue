@@ -1,9 +1,11 @@
 <template>
   <div>
-    <page-session-title :session-title="sessionTitle" />
-    <page-session-content>
-      <slot name="default"></slot>
-    </page-session-content>
+    <seccion>
+      <page-session-title :session-title="sessionTitle" />
+      <page-session-content>
+        <slot name="default"></slot>
+      </page-session-content>
+    </seccion>
   </div>
 </template>
 

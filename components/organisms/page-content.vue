@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- ここにパンくずリスト追加イメージ -->
     <slot></slot>
   </div>
 </template>

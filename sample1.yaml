@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web_develop_document
+  labels:
+    run: web_develop_document
+spec:
+  selector:
+    run: web_develop_document
+  ports:
+    - name: http
+      port: 8080
+  type: NodePort
+
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: web_develop_document
+  labels:
+    run: web_develop_document
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: web_develop_document
+    spec:
+      containers:
+        - name: web_develop_document
+          image: gcr.io/[プロジェクトID]/apiprod:1.0.0
+          ports:
+            - containerPort: 8080

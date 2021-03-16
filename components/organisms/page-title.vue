@@ -1,6 +1,6 @@
 <template>
-  <div class="title-color">
-    <h1>{{ pageTitle }}</h1>
+  <div class="page-title">
+    <h2>{{ pageTitle }}</h2>
   </div>
 </template>
 
@@ -20,7 +20,9 @@ export default {
 </script>
 
 <style scoped>
-.title-color {
-  background-color: blue;
+.page-title {
+  font-weight: bold;
+  font-size: 30px;
+  margin: 32px 0 32px 0;
 }
 </style>
