@@ -1,14 +1,14 @@
 import colors from 'vuetify/es5/util/colors'
 
-require('dotenv').config();
-const { TEST_KEY } = process.env;
+require('dotenv').config()
+const { TEST_KEY } = process.env
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: true,
 
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: 'server',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -46,6 +46,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'nuxt-i18n',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -74,6 +75,23 @@ export default {
   build: {},
 
   env: {
-    TEST_KEY
+    TEST_KEY,
+  },
+
+  // server middleware
+  serverMiddleware: ['~/server/health.js'],
+
+  // multi-lang
+  i18n: {
+    locales: [
+      { file: 'ja.json', code: 'ja' },
+      { file: 'en.json', code: 'en' },
+    ],
+    strategy: 'prefix',
+    defaultLocale: 'ja',
+    vueI18n: {
+      fallbackLocale: 'ja',
+    },
+    langDir: 'lang/',
   },
 }

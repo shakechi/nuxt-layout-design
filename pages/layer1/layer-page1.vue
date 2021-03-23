@@ -1,5 +1,5 @@
 <template>
-  <dev> </dev>
+  <dev>layer-page1</dev>
 </template>
 
 <script>
