@@ -2,6 +2,8 @@
   <v-app-bar color="primary" app clipped-left>
     <v-toolbar-title>Vuetify</v-toolbar-title>
     <v-spacer></v-spacer>
+
+    <v-select :items="items" label="Standard" dense></v-select>
     <v-toolbar-items>
       <v-btn text>ログオン</v-btn>
       <v-btn text>ログイン</v-btn>
@@ -10,5 +12,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data: () => ({
+    items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+  }),
+}
 </script>
