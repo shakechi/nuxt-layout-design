@@ -77,6 +77,26 @@
         </v-card-actions>
       </v-card>
     </v-col>
+    <v-col>
+      <section class="container">
+        <div>
+          <h1 class="title">Nuxt i18n</h1>
+          <div>
+            <h2>現在の言語：{{ $i18n.locale }}</h2>
+          </div>
+          <div>
+            {{ $t('hello') }}
+            {{ $t('message') }}
+            <div>
+              <nuxt-link :to="switchLocalePath('en')">English</nuxt-link>
+            </div>
+            <div>
+              <nuxt-link :to="switchLocalePath('ja')">japanese</nuxt-link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </v-col>
   </v-row>
 </template>
 
@@ -94,3 +114,10 @@ export default {
   },
 }
 </script>
+
+<i18n lang="yaml">
+en:
+  hello: 'hello world!'
+ja:
+  hello: 'こんにちは、世界!'
+</i18n>

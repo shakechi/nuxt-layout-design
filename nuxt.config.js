@@ -84,14 +84,14 @@ export default {
   // multi-lang
   i18n: {
     locales: [
-      { file: 'ja.json', code: 'ja' },
-      { file: 'en.json', code: 'en' },
+      { iso: 'ja_JP', code: 'ja' },
+      { iso: 'en-US', code: 'en' },
     ],
     strategy: 'prefix',
     defaultLocale: 'ja',
     vueI18n: {
       fallbackLocale: 'ja',
     },
-    langDir: 'lang/',
+    vueI18nLoader: true,
   },
 }
